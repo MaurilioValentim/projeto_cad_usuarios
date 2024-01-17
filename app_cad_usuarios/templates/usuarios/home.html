@@ -170,10 +170,10 @@
             <div class="navtitle">Monitor de Sensores</div>
             
                     <!-- Datas  -->
-            <div class="navdata" id = "date">mm/dd/yyyy</div>
+            <!-- <div class="navdata" id = "date">mm/dd/yyyy</div>
             <div class="navheading">DATA</div><br>
             <div class="navdata" id = "time">00:00:00</div>
-            <div class="navheading">HORARIO</div>
+            <div class="navheading">HORARIO</div> -->
 
             
           </div>
@@ -240,13 +240,7 @@
           {% csrf_token %}
           <label for="inputIntensidadedaLuminaria" class="visually-hidden"> Intensidade da Luminaria </label>
           <input type="number" name="texto8" required class="form-control-sm" id="inputIntensidadedaLuminaria" min=0 max=100 >
-          <input type="text" name="texto" required value={{Tensao}} style="display: none;">
-          <input type="text" name="texto2" required value={{Corrente}} style="display: none;">
-          <input type="text" name="texto3" required value={{Potencia}} style="display: none;">
-          <input type="text" name="texto4" required value={{fp}} style="display: none;">
-          <input type="text" name="texto5" required value={{frequencia}} style="display: none;">
-          <input type="text" name="texto6" required value={{EstadoDia}} style="display: none;">
-          <input type="text" name="texto7" required value={{EstadodaLuminaria}} style="display: none;">
+          
           
         </div>
         &nbsp;&nbsp;&nbsp;

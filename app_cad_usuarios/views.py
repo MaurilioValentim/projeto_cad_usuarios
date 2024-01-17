@@ -114,18 +114,11 @@ def home(request):
 def recebevalor(request):
     
         if request.method == 'POST':
-            texto = request.POST.get('texto')
-            valor2 = request.POST.get('texto2')
-            valor3 = request.POST.get('texto3')
-            valor4 = request.POST.get('texto4')
-            valor5 = request.POST.get('texto5')
-            valor6 = request.POST.get('texto6')
-            valor7 = request.POST.get('texto7')
+            
             valor8 = request.POST.get('texto8')
-            if texto:
-                print(texto)
+            if valor8:
                 url = 'https://api.thingspeak.com/update?api_key=676O239213T88NGE&field1=' + valor8
-                #url = 'https://api.thingspeak.com/update?api_key=60GSXN7N64BU0PSQ&field1='+ texto + '&field2=' + valor2 + '&field3=' + valor3 + '&field4=' + valor4 + '&field5=' + valor5 + '&field6=' + valor6 + '&field7=' + valor7 + '&field8=' + valor8
+                
                 response = requests.get(url)
             
         return redirect('/')
