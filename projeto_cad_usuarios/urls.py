@@ -4,4 +4,5 @@ from app_cad_usuarios import views
 
 urlpatterns = [
     path('', views.home,name='home'),
+    path('enviar', views.recebevalor, name='enviar'),
 ]
