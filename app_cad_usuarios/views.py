@@ -111,14 +111,14 @@ def home(request):
 
 
 #Enviar os dados
-# def recebevalor(request):
+def recebevalor(request):
     
-#         if request.method == 'POST':
+        if request.method == 'POST':
             
-#             valor8 = request.POST.get('texto8')
-#             if valor8:
-#                 url = 'https://api.thingspeak.com/update?api_key=676O239213T88NGE&field1=' + valor8
+            valor8 = request.POST.get('texto8')
+            if valor8:
+                url = 'https://api.thingspeak.com/update?api_key=676O239213T88NGE&field1=' + valor8
                 
-#                 response = requests.get(url)
+                response = requests.get(url)
             
-#         return redirect('/')
+        return redirect('/')
