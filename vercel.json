@@ -1,9 +1,5 @@
 {
-    "builds": [{
-        "src": "projeto_cad_usuarios/wsgi.py",
-        "use": "@vercel/python"
-        
-    }],
+    
     "routes": [
         { "handle": "filesystem" },
         {
