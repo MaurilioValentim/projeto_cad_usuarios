@@ -1,15 +1,8 @@
 {
-    "builds": [
+    "rewrites": [
         {
-            "src": "projeto_cad_usuarios/wsgi.py",
-            "use": "@vercel/python"
-        }
-    ],
-    "routes": [
-        { "handle": "filesystem" },
-        {
-            "src": "/(.*)",
-            "dest": "projeto_cad_usuarios/wsgi.py"
+            "source": "/(.*)",
+            "destination": "/api"
         }
     ]
 }
