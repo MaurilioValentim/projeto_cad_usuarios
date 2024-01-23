@@ -1,8 +1,25 @@
+// {
+//     "rewrites": [
+//         {
+//             "source": "/(.*)",
+//             "destination": "/"
+//         }
+//     ]
+// }
+
 {
-    "rewrites": [
+    "version": 2,
+    "builds": [
         {
-            "source": "/(.*)",
-            "destination": "/"
+            "src": "projeto_cad_usuarios/wsgi.py",
+            "use": "@vercel/python"
+        }
+    ],
+    "routes": [
+        { "handle": "filesystem" },
+        {
+            "src": "/(.*)",
+            "dest": "projeto_cad_usuarios/wsgi.py"
         }
     ]
 }
