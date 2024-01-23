@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-#+zq24-!#y(ow*pxo1w3@vtme@2k41zur2$0by9ki1aketyyu4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app','127.0.0.1']
+ALLOWED_HOSTS = ['*']
+# ['.vercel.app','127.0.0.1']
 
 
 # Application definition
@@ -122,3 +123,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CSRF_COOKIE_SECURE = True  # ou False, dependendo do seu ambiente
+CSRF_COOKIE_HTTPONLY = True
+CSRF_USE_SESSIONS = False  #

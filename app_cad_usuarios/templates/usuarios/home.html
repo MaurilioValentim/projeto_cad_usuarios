@@ -160,7 +160,7 @@
           function criarRequisicao() {
                       location.reload();
           }
-          setInterval(criarRequisicao, 5000);
+          setInterval(criarRequisicao, 10000);
       });
       </script>
 
@@ -234,10 +234,10 @@
     
 
     <form method="post" action="{% url 'enviar' %}">
-      
+      {% csrf_token %}
       <div style="text-align: center;" class="container">
         <div>
-          {% csrf_token %}
+          
           <label for="inputIntensidadedaLuminaria" class="visually-hidden"> Intensidade da Luminaria </label>
           <input type="number" name="texto8" required class="form-control-sm" id="inputIntensidadedaLuminaria" min=0 max=100 >
           

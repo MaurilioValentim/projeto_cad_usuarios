@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect
 import requests
 import json
+from django.views.decorators.csrf import ensure_csrf_cookie
+from django.views.decorators.csrf import csrf_protect, csrf_exempt
 
-
+@ensure_csrf_cookie
 # Create your views here.
 def home(request):
 
@@ -109,7 +111,7 @@ def home(request):
 
     return render(request,'usuarios/home.html', { 'Tensao': valor1, 'Corrente': valor2, 'Potencia': valor3, 'fp': valor4, 'frequencia': valor5, 'EstadoDia': valor6, 'EstadodaLuminaria': valor7, 'Intensidadea': valor8})
 
-
+@csrf_exempt
 #Enviar os dados
 def recebevalor(request):
     
